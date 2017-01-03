@@ -7,4 +7,24 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_archivo">ArchivoActivity</string>
     <string name="title_activity_date">DateActivity</string>
+
+    <string name="direccion">Dirección</string>
+    <string name="telefono">Telefono</string>
+    <string name="tipo">Tipo</string>
+    <string name="ba_os_comunes">Baños Comunes</string>
+    <string name="area">Area</string>
+    <string name="archivo">Archivo</string>
+    <string name="arrendador">Arrendador</string>
+    <string name="habitaciones">Habitaciones</string>
+    <string name="sala">Sala</string>
+    <string name="sala_comedor">Sala Comedor</string>
+    <string name="comedor">Comedor</string>
+    <string name="lavadero">Lavadero</string>
+    <string name="parqueadero">Parqueadero</string>
+    <string name="precio">Precio</string>
+    <string name="estrato">Estrato</string>
+    <string name="capturas">Capturas</string>
+    <string name="inmueble">Inmueble</string>
+    <string name="reportes">Reportes</string>
+    <string name="title_activity_inmueble">InmuebleActivity</string>
 </resources>

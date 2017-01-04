@@ -101,6 +101,7 @@ public class InmuebleActivity extends AppCompatActivity {
                 clsInmueble.Lavadero(BlnLavadero);
                 clsInmueble.Comedor(BlnComedor);
                 clsInmueble.Patio(BlnPatio);
+                mLimpiarCampos();
 
             }
         });
@@ -205,6 +206,26 @@ public class InmuebleActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void mLimpiarCampos() {
+        EdtArchivo.setText("");
+        EdtArea.setText("");
+        EdtArrendador.setText("");
+        EdtArrendatario.setText("");
+        EdtPrecio.setText("");
+        EdtHabitaciones.setText("");
+        EdtEstrato.setText("");
+        EdtTelefono.setText("");
+        EdtBanosComunes.setText("");
+        EdtContrato.setText("");
+        SpTipoInmueble.setSelection(0);
+        SpComedor.setSelection(1);
+        SpLavadero.setSelection(1);
+        SpPatio.setSelection(1);
+        SpParqueadero.setSelection(1);
+        SpSala.setSelection(1);
+        SpSalaComedor.setSelection(1);
     }
     //endregion Metodos
 }

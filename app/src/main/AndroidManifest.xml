@@ -26,7 +26,8 @@
             android:name=".DateActivity"
             android:label="@string/title_activity_date"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".InmuebleActivity"></activity>
+        <activity android:name=".InmuebleActivity" />
+        <activity android:name=".AcercaDeActivity"></activity>
     </application>
 
 </manifest>

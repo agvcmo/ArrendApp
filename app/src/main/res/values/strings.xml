@@ -30,4 +30,7 @@
     <string name="guardar">Guardar</string>
     <string name="patio">Patio</string>
     <string name="contrato">Contrato</string>
+    <string name="acerca_de">Acerca de...</string>
+    <string name="desarrolladorUno">Alexander Grajales</string>
+    <string name="desarrolladorDos">Cristian Mejia</string>
 </resources>

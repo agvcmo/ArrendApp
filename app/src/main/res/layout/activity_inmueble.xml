@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_archivo"
@@ -36,7 +38,8 @@
                 android:id="@+id/Arrendatario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Arrendatario" />
+                android:hint="Arrendatario"
+                android:inputType="text"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -48,7 +51,8 @@
                 android:id="@+id/Arrendador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/arrendador" />
+                android:hint="@string/arrendador"
+                android:inputType="text"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -61,7 +65,8 @@
                 android:id="@+id/Direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/direccion" />
+                android:hint="@string/direccion"
+                android:inputType="text"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -86,7 +91,8 @@
                 android:id="@+id/Tipo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/tipo" />
+                android:hint="@string/tipo"
+                android:inputType="text"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -126,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/archivo"
-                android:inputType="numberDecimal" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -178,7 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/lavadero"
-                android:inputType="numberDecimal" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -191,7 +197,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/comedor"
-                android:inputType="numberDecimal" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -205,7 +211,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/sala_comedor"
-                android:inputType="numberDecimal" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -218,7 +224,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/sala"
-                android:inputType="numberDecimal" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -234,7 +240,20 @@
                 android:inputType="numberDecimal" />
 
         </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/BtnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end|center_horizontal"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+
+
     </LinearLayout>
 
 
-</RelativeLayout>
+
+
+</ScrollView>

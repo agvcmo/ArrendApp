@@ -10,7 +10,7 @@
 
     <string name="direccion">Dirección</string>
     <string name="telefono">Telefono</string>
-    <string name="tipo">Tipo</string>
+    <string name="tipo_inmueble">Tipo inmueble</string>
     <string name="ba_os_comunes">Baños Comunes</string>
     <string name="area">Area</string>
     <string name="archivo">Archivo</string>
@@ -28,4 +28,6 @@
     <string name="reportes">Reportes</string>
     <string name="title_activity_inmueble">InmuebleActivity</string>
     <string name="guardar">Guardar</string>
+    <string name="patio">Patio</string>
+    <string name="contrato">Contrato</string>
 </resources>

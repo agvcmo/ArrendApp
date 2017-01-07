@@ -78,6 +78,9 @@ public class MainActivity extends AppCompatActivity
             case (R.id.nav_inmueble):
                 mIniciarActividad(InmuebleActivity.class);
                 break;
+            case (R.id.nav_contrato):
+                mIniciarActividad(ContratoActivity.class);
+                break;
             default:
                 Toast.makeText(this, "En construcción", Toast.LENGTH_SHORT).show();
                 break;

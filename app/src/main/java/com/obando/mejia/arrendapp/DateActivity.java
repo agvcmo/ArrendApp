@@ -39,7 +39,7 @@ public class DateActivity extends AppCompatActivity {
                 if(hasFocus)
                 {
                     DateDialog dialog = new DateDialog(view);
-                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     dialog.show(fragmentTransaction, "DatePicker");
                 }
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_contrato"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.obando.mejia.arrendapp.ContratoActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de Contratos"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/Estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/estado"
+        android:layout_below="@+id/titulo"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spEstado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Estado"/>
+
+    <TextView
+        android:id="@+id/FechaInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fecha_inicial"
+        android:layout_below="@+id/spEstado"
+        android:layout_marginTop="16dp"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_fechaInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FechaInicial"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/FechaFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fecha_final"
+        android:layout_below="@+id/fragment_fechaInicial"
+        android:layout_marginTop="16dp"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_fechaFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FechaFinal"
+        android:layout_marginTop="16dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/BtnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end|center_horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        android:layout_below="@+id/fragment_fechaFinal"/>
+
+</RelativeLayout>

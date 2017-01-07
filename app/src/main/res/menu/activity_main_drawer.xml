@@ -5,12 +5,16 @@
         android:title="@string/capturas">
         <item
             android:id="@+id/nav_inmueble"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_store_black_48dp"
             android:title="@string/inmueble" />
         <item
             android:id="@+id/nav_archivo"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_insert_drive_file_black_48dp"
             android:title="@string/archivo" />
+        <item
+            android:id="@+id/nav_contrato"
+            android:icon="@drawable/ic_create_black_48dp"
+            android:title="@string/contrato" />
     </group>
 
     <item android:title="@string/reportes">

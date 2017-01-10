@@ -31,6 +31,7 @@ public class FechaFragment extends Fragment {
         fTipoFecha = getArguments().getString("TipoFecha");
         fView = inflater.inflate(R.layout.fragment_fecha, container, false);
         final EditText txtDate = (EditText) fView.findViewById(R.id.txtdate);
+        txtDate.clearFocus();
 
         txtDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -43,6 +44,7 @@ public class FechaFragment extends Fragment {
                 }
 
             }
+
         });
 
         txtDate.addTextChangedListener(new TextWatcher() {

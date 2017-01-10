@@ -13,89 +13,88 @@
 
     tools:context="com.obando.mejia.arrendapp.ArchivoActivity">
 
-    <TextView
-        android:id="@+id/titulo"
+    <LinearLayout
+        android:id="@+id/layoutinmueble"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Registro_de_Archivos"
-        android:textSize="30sp"
-        android:layout_centerHorizontal="true"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/TipoArchivo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Tipo_Archivo"
-        android:layout_below="@+id/titulo"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_de_Archivos"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"/>
 
-    <Spinner
-        android:id="@+id/spTipoArchivo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TipoArchivo"/>
+        <TextView
+            android:id="@+id/TipoArchivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Tipo_Archivo"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/FechaInicial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/fecha_inicial"
-        android:layout_below="@+id/spTipoArchivo"
-        android:layout_marginTop="16dp"/>
+        <Spinner
+            android:id="@+id/spTipoArchivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TipoArchivo"/>
 
-    <RelativeLayout
-        android:id="@+id/fragment_fechaInicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/FechaInicial"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/FechaInicial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/fecha_inicial"
+            android:layout_below="@+id/spTipoArchivo"
+            android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/Ruta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Ruta"
-        android:layout_below="@+id/fragment_fechaInicial"
-        android:layout_marginTop="16dp"/>
+        <RelativeLayout
+            android:id="@+id/fragment_fechaInicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FechaInicial"
+            android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/CampoRuta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Ruta"
-        android:layout_below="@+id/Ruta"
-        android:layout_marginTop="16dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/Descripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Descripcion"
-        android:layout_below="@+id/CampoRuta"
-        android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/Ruta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Ruta"
+                android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/CampoDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Descripcion"
-        android:layout_below="@+id/Descripcion"
-        android:layout_marginTop="16dp"/>
+        </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/BtnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end|center_horizontal"
-        app:srcCompat="@android:drawable/ic_menu_save"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/CampoDescripcion"
-        android:layout_toRightOf="@+id/fragment_fechaInicial"
-        android:layout_toEndOf="@+id/fragment_fechaInicial" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Descripcion"
+                android:layout_marginTop="16dp"
+                android:inputType="textLongMessage" />
+
+        </android.support.design.widget.TextInputLayout>
 
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/BtnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end|center_horizontal"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_save"
+            android:layout_below="@+id/CampoDescripcion"/>
+
+
+    </LinearLayout>
 </RelativeLayout>
 
 

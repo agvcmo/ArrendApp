@@ -15,6 +15,11 @@ public class ClsUsuario {
     private String NombreUsuario;
     private String Clave;
     private String Telefono;
+    private String Celular;
+    private String Direccion;
+    private int Edad;
+    private EnumGenero Genero;
+    private EnumRolUsuario TipoUsuario;
 
     public int getId() {
         return Id;
@@ -111,12 +116,6 @@ public class ClsUsuario {
     public void setSegundoApellido(String segundoApellido) {
         SegundoApellido = segundoApellido;
     }
-
-    private String Celular;
-    private String Direccion;
-    private int Edad;
-    private EnumGenero Genero;
-    private EnumRolUsuario TipoUsuario;
 
 
 }

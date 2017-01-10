@@ -41,4 +41,9 @@
     <string name="fecha_inicial">Fecha Inicial</string>
     <string name="estado">Estado</string>
     <string name="seleccione_la_fecha">Seleccione la fecha</string>
+    <string name="Tipo_Archivo">Tipo Archivo</string>
+    <string name="Ruta">Ruta</string>
+    <string name="Descripcion">Descripción</string>
+    <string name="Registro_de_Archivos">Registro de Archivos</string>
+
 </resources>

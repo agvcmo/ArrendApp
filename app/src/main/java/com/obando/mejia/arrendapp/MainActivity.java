@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
                 mIniciarActividad(ContratoActivity.class);
                 break;
             case (R.id.nav_habitacion):
-                mIniciarActividad(ContratoActivity.class);
+                mIniciarActividad(HabitacionActivity.class);
                 break;
             case (R.id.nav_usuario):
                 mIniciarActividad(UsuarioActivity.class);

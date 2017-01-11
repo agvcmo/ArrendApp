@@ -11,26 +11,28 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ArchivoActivity"
-            android:label="@string/title_activity_archivo"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_archivo" />
         <activity
             android:name=".DateActivity"
-            android:label="@string/title_activity_date"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".InmuebleActivity" />
-        <activity android:name=".AcercaDeActivity" />
+            android:label="@string/title_activity_date" />
+        <activity
+            android:name=".InmuebleActivity"
+            android:label="@string/title_activity_inmueble" />
+        <activity
+            android:name=".AcercaDeActivity"
+            android:label="@string/title_activity_acerca_de" />
         <activity
             android:name=".ContratoActivity"
-            android:label="@string/title_activity_contrato"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_contrato" />
+        <activity
+            android:name=".HabitacionActivity"
+            android:label="@string/title_activity_habitacion" />
         <activity
             android:name=".UsuarioActivity"
-            android:label="Usuarios"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_usuario" />
 
         <activity android:name=".SplashActivity">
             <intent-filter>

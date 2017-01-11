@@ -3,10 +3,6 @@ package com.obando.mejia.arrendapp.Modelo;
 import com.obando.mejia.arrendapp.Enumeraciones.EnumGenero;
 import com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario;
 
-/**
- * Created by ALEXANDER on 10/01/2017.
- */
-
 public class ClsUsuario {
     private int Id;
     private String Nombre;
@@ -18,6 +14,16 @@ public class ClsUsuario {
     private String Celular;
     private String Direccion;
     private int Edad;
+
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String correo) {
+        Correo = correo;
+    }
+
+    private String Correo;
     private EnumGenero Genero;
     private EnumRolUsuario TipoUsuario;
 

@@ -13,6 +13,7 @@ public class ClsUsuario {
     private String Telefono;
     private String Celular;
     private String Direccion;
+    private String Correo;
     private int Edad;
 
     public String getCorreo() {
@@ -89,6 +90,14 @@ public class ClsUsuario {
 
     public void setDireccion(String direccion) {
         Direccion = direccion;
+    }
+
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String correo) {
+        Correo = correo;
     }
 
     public String getCelular() {

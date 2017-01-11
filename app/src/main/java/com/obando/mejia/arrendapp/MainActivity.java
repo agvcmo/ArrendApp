@@ -2,6 +2,9 @@ package com.obando.mejia.arrendapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -77,6 +80,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case (R.id.nav_contrato):
                 mIniciarActividad(ContratoActivity.class);
+                break;
+            case (R.id.nav_habitacion):
+                mIniciarActividad(HabitacionActivity.class);
                 break;
             case (R.id.nav_usuario):
                 mIniciarActividad(UsuarioActivity.class);

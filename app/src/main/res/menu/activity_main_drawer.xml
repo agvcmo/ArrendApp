@@ -4,6 +4,10 @@
     <group android:checkableBehavior="single"
         android:title="@string/capturas">
         <item
+            android:id="@+id/nav_usuario"
+            android:icon="@drawable/ic_account_circle_black_48dp"
+            android:title="@string/Usuarios" />
+        <item
             android:id="@+id/nav_inmueble"
             android:icon="@drawable/ic_store_black_48dp"
             android:title="@string/inmueble" />
@@ -12,13 +16,13 @@
             android:icon="@drawable/ic_insert_drive_file_black_48dp"
             android:title="@string/archivo" />
         <item
-        android:id="@+id/nav_contrato"
-        android:icon="@drawable/ic_create_black_48dp"
-        android:title="@string/contrato" />
+            android:id="@+id/nav_contrato"
+            android:icon="@drawable/ic_create_black_48dp"
+            android:title="@string/contrato" />
         <item
-            android:id="@+id/nav_usuario"
-            android:icon="@drawable/ic_account_circle_black_48dp"
-            android:title="@string/Usuarios" />
+            android:id="@+id/nav_habitacion"
+            android:icon="@drawable/ic_local_hotel_black_48dp"
+            android:title="@string/habitaci_n" />
     </group>
 
     <item android:title="@string/reportes">
@@ -26,11 +30,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="@string/Share" />
+                android:title="Share" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/Send" />
+                android:title="Send" />
         </menu>
     </item>
 

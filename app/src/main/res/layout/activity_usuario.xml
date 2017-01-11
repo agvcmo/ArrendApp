@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Clave"
-                android:inputType="textPassword" />
+                android:inputType="numberPassword|textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -129,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Direccion"
-                android:inputType="number" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -156,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Edad"
-                android:inputType="textEmailAddress" />
+                android:inputType="number" />
 
         </android.support.design.widget.TextInputLayout>
 

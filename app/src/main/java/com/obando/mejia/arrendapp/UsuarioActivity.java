@@ -32,6 +32,7 @@ public class UsuarioActivity extends AppCompatActivity {
         mInstanciarObjetos();
         mAsignarEventos();
     }
+
     private void mInstanciarObjetos() {
         EditNombre = (EditText) findViewById(R.id.Nombre);
         EditApellido = (EditText) findViewById(R.id.Apellido);
@@ -91,18 +92,26 @@ public class UsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ClsUsuario clsUsuario = new ClsUsuario();
-                clsUsuario.setGenero(EnumGenero.values()[fGenero]);
-                clsUsuario.setTipoUsuario(EnumRolUsuario.values()[fTipoUsuario]);
-                clsUsuario.setNombre(EditNombre.getText().toString());
-                clsUsuario.setApellido(EditApellido.getText().toString());
-                clsUsuario.setSegundoApellido(EditSegundoApellido.getText().toString());
-                clsUsuario.setNombreUsuario(EditNombreUsuario.getText().toString());
-                clsUsuario.setClave(EditClave.getText().toString());
-                clsUsuario.setTelefono(EditTelefono.getText().toString());
-                clsUsuario.setCelular(EditCelular.getText().toString());
-                clsUsuario.setDireccion(EditDireccion.getText().toString());
-                clsUsuario.setEdad(Integer.parseInt(EditEdad.getText().toString()));
-                clsUsuario.setCorreo(EditCorreo.getText().toString());
+                try {
+
+
+                    clsUsuario.setGenero(EnumGenero.values()[fGenero]);
+                    clsUsuario.setTipoUsuario(EnumRolUsuario.values()[fTipoUsuario]);
+                    clsUsuario.setNombre(EditNombre.getText().toString());
+                    clsUsuario.setApellido(EditApellido.getText().toString());
+                    clsUsuario.setSegundoApellido(EditSegundoApellido.getText().toString());
+                    clsUsuario.setNombreUsuario(EditNombreUsuario.getText().toString());
+                    clsUsuario.setClave(EditClave.getText().toString());
+                    clsUsuario.setTelefono(EditTelefono.getText().toString());
+                    clsUsuario.setCelular(EditCelular.getText().toString());
+                    clsUsuario.setDireccion(EditDireccion.getText().toString());
+                    clsUsuario.setEdad(Integer.parseInt(EditEdad.getText().toString()));
+                    clsUsuario.setCorreo(EditCorreo.getText().toString());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    mLimpiarCampos();
+                }
             }
         });
     }

@@ -1,6 +1,7 @@
 package com.obando.mejia.arrendapp;
 //region Librerias
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -27,7 +28,7 @@ import static com.obando.mejia.arrendapp.Enumeraciones.EnumEstadoContrato.Estado
 public class ContratoActivity extends AppCompatActivity implements FechaFragment.onFechaSeleccionada {
 
     //region Propiedades
-    FloatingActionButton BtnGuardar;
+    FloatingActionButton BtnGuardar, BtnAgregarArchivo;
     Spinner SpEstadoContrato;
     int fEstadoContrato;
     String fFechaInicial, fFechaFinal;
@@ -79,6 +80,7 @@ public class ContratoActivity extends AppCompatActivity implements FechaFragment
         SpEstadoContrato.setSelection(0);
 
         BtnGuardar = (FloatingActionButton) findViewById(R.id.BtnGuardar);
+        BtnAgregarArchivo = (FloatingActionButton)findViewById(R.id.BtnAgregarArchivo);
 
         FragmentManager FM = getSupportFragmentManager();
         FragmentTransaction FT = FM.beginTransaction();
@@ -116,15 +118,33 @@ public class ContratoActivity extends AppCompatActivity implements FechaFragment
             @Override
             public void onClick(View view) {
                 ClsContrato clsContrato = new ClsContrato();
-                clsContrato.Estado(EnumEstadoContrato.values()[fEstadoContrato]);
                 try {
+                    clsContrato.Estado(EnumEstadoContrato.values()[fEstadoContrato]);
                     clsContrato.FechaInicio(fFormatoFecha.parse(fFechaInicial()));
                     clsContrato.FechaFin(fFormatoFecha.parse(fFechaFinal()));
                 } catch (ParseException e) {
                     e.printStackTrace();
+                }finally {
+                    mLimpiarCampos();
                 }
             }
         });
+
+        BtnAgregarArchivo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mIniciarActividad(ArchivoActivity.class);
+            }
+        });
+    }
+
+    private void mLimpiarCampos() {
+        SpEstadoContrato.setSelection(0);
+    }
+
+    private void mIniciarActividad(Class paramActivity) {
+        Intent intent = new Intent(this, paramActivity);
+        startActivity(intent);
     }
 //endregion Metodos
 

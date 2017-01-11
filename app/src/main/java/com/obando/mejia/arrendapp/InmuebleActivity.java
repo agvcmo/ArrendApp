@@ -84,25 +84,31 @@ public class InmuebleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ClsInmueble clsInmueble = new ClsInmueble();
-                clsInmueble.Id(1);
-                clsInmueble.IdArrendatario(Integer.parseInt(EdtArrendatario.getText().toString()));
-                clsInmueble.IdArrendador(Integer.parseInt(EdtArrendador.getText().toString()));
-                clsInmueble.Area(Double.valueOf(EdtArea.getText().toString()));
-                clsInmueble.BanosComunes(Integer.parseInt(EdtBanosComunes.getText().toString()));
-                clsInmueble.Direccion(EdtDireccion.getText().toString());
-                clsInmueble.Estrato(Integer.parseInt(EdtEstrato.getText().toString()));
-                clsInmueble.IdContrato(Integer.parseInt(EdtContrato.getText().toString()));
-                clsInmueble.IdArchivo(Integer.parseInt(EdtArchivo.getText().toString()));
-                clsInmueble.Telefono(EdtTelefono.getText().toString());
-                clsInmueble.Tipo(fTipoInmueble);
-                clsInmueble.Sala(BlnSala);
-                clsInmueble.Parqueadero(BlnParqueadero);
-                clsInmueble.SalaComedor(BlnSalaComedor);
-                clsInmueble.Lavadero(BlnLavadero);
-                clsInmueble.Comedor(BlnComedor);
-                clsInmueble.Patio(BlnPatio);
-                mLimpiarCampos();
+                try {
 
+
+                    clsInmueble.Id(1);
+                    clsInmueble.IdArrendatario(Integer.parseInt(EdtArrendatario.getText().toString()));
+                    clsInmueble.IdArrendador(Integer.parseInt(EdtArrendador.getText().toString()));
+                    clsInmueble.Area(Double.valueOf(EdtArea.getText().toString()));
+                    clsInmueble.BanosComunes(Integer.parseInt(EdtBanosComunes.getText().toString()));
+                    clsInmueble.Direccion(EdtDireccion.getText().toString());
+                    clsInmueble.Estrato(Integer.parseInt(EdtEstrato.getText().toString()));
+                    clsInmueble.IdContrato(Integer.parseInt(EdtContrato.getText().toString()));
+                    clsInmueble.IdArchivo(Integer.parseInt(EdtArchivo.getText().toString()));
+                    clsInmueble.Telefono(EdtTelefono.getText().toString());
+                    clsInmueble.Tipo(fTipoInmueble);
+                    clsInmueble.Sala(BlnSala);
+                    clsInmueble.Parqueadero(BlnParqueadero);
+                    clsInmueble.SalaComedor(BlnSalaComedor);
+                    clsInmueble.Lavadero(BlnLavadero);
+                    clsInmueble.Comedor(BlnComedor);
+                    clsInmueble.Patio(BlnPatio);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    mLimpiarCampos();
+                }
             }
         });
 

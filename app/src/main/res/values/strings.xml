@@ -61,9 +61,12 @@
     <string name="Registro_de_Usuarios">Registro de Usuarios</string>
     <string name="Share">Share</string>
     <string name="Send">Send</string>
-
-
-
+    <string name="registro_de_contratos">Registro de Contratos</string>
+    <string name="agregar_archivos">Agregar archivos</string>
+    <string name="registro_de_habitaciones">Registro de habitaciones</string>
+    <string name="armario">Armario</string>
+    <string name="ba_o">Baño</string>
+    <string name="habitaci_n">Habitación</string>
 
 
 </resources>

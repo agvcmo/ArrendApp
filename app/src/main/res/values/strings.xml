@@ -45,5 +45,25 @@
     <string name="Ruta">Ruta</string>
     <string name="Descripcion">Descripción</string>
     <string name="Registro_de_Archivos">Registro de Archivos</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="SegundoApellido">Segundo Apellido</string>
+    <string name="Nombre_De_Usuario">Nombre De Usuario</string>
+    <string name="Clave">Clave</string>
+    <string name="Telefono">Telefono</string>
+    <string name="Celular">Celular</string>
+    <string name="Direccion">Direccion</string>
+    <string name="Edad">Edad</string>
+    <string name="Tipo">Tipo Usuario</string>
+    <string name="Genero">Genero</string>
+    <string name="Correo">Correo</string>
+    <string name="Usuarios">Usuarios</string>
+    <string name="Registro_de_Usuarios">Registro de Usuarios</string>
+    <string name="Share">Share</string>
+    <string name="Send">Send</string>
+
+
+
+
 
 </resources>

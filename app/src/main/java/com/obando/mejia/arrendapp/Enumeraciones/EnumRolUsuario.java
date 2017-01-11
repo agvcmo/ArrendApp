@@ -1,9 +1,5 @@
 package com.obando.mejia.arrendapp.Enumeraciones;
 
-/**
- * Created by ALEXANDER on 10/01/2017.
- */
-
 public enum EnumRolUsuario {
     Arrendatario,
     Arrendador;

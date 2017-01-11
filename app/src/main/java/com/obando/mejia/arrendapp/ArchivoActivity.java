@@ -1,5 +1,6 @@
 package com.obando.mejia.arrendapp;
 
+import android.preference.EditTextPreference;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.obando.mejia.arrendapp.Enumeraciones.EnumEstadoContrato;
@@ -25,6 +27,7 @@ import static com.obando.mejia.arrendapp.Enumeraciones.EnumTipoArchivo.TipoArchi
 public class ArchivoActivity extends AppCompatActivity implements FechaFragment.onFechaSeleccionada
 {
     FloatingActionButton BtnGuardar;
+    EditText EditDescripcion, EditRuta;
     Spinner SpTipoArchivo;
     int fTipoArchivo;
     String fFechaInicial;
@@ -97,6 +100,8 @@ public class ArchivoActivity extends AppCompatActivity implements FechaFragment.
             public void onClick(View view) {
                 ClsArchivo clsArchivo = new ClsArchivo();
                 clsArchivo.setTipo(EnumTipoArchivo.values()[fTipoArchivo]);
+                clsArchivo.setRuta(EditRuta.getText().toString());
+                clsArchivo.setDescripcion(EditDescripcion.getText().toString());
                 try {
                     clsArchivo.setFecha(fFormatoFecha.parse(fFechaInicial()));
                 } catch (ParseException e) {
@@ -104,6 +109,13 @@ public class ArchivoActivity extends AppCompatActivity implements FechaFragment.
                 }
             }
         });
+    }
+
+    private void mLimpiarCampos() {
+
+        EditRuta.setText("");
+        EditDescripcion.setText("");
+        SpTipoArchivo.setSelection(0);
     }
 //endregion Metodos
 

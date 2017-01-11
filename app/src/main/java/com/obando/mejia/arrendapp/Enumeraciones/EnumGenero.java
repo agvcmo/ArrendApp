@@ -1,10 +1,10 @@
 package com.obando.mejia.arrendapp.Enumeraciones;
 
-public enum EnumGenero{
+public enum EnumGenero {
     Femenino,
     Masculino;
 
-    public String[] retornarEnumeracion() {
+    public static String[] Genero() {
         EnumGenero[] enumGeneros = values();
         String[] tipos = new String[enumGeneros.length];
 

@@ -1,9 +1,5 @@
 package com.obando.mejia.arrendapp.Enumeraciones;
 
-/**
- * Created by personal on 04/01/2017.
- */
-
 public enum EnumTipoInmueble {
     Apartamento,
     ApartaEstudio,

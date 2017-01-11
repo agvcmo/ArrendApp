@@ -1,9 +1,5 @@
 package com.obando.mejia.arrendapp.Enumeraciones;
 
-/**
- * Created by personal on 06/01/2017.
- */
-
 public enum EnumEstadoContrato {
     Activo(0),
     Inactivo(1),

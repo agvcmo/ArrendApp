@@ -13,84 +13,87 @@
     tools:context="com.obando.mejia.arrendapp.Controlador.Activity.ContratoActivity">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/registro_de_contratos"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/Estado"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/titulo"
-        android:layout_marginTop="16dp"
-        android:hint="@string/estado" />
+        android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spEstado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Estado" />
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/registro_de_contratos"
+            android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/FechaInicial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spEstado"
-        android:layout_marginTop="16dp"
-        android:hint="@string/fecha_inicial" />
+        <TextView
+            android:id="@+id/Estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="16dp"
+            android:hint="@string/estado" />
 
-    <RelativeLayout
-        android:id="@+id/fragment_fechaInicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/FechaInicial"
-        android:layout_marginTop="16dp" />
+        <Spinner
+            android:id="@+id/spEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Estado" />
 
-    <TextView
-        android:id="@+id/FechaFinal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fragment_fechaInicial"
-        android:layout_marginTop="16dp"
-        android:hint="@string/fecha_final" />
+        <TextView
+            android:id="@+id/FechaInicial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spEstado"
+            android:layout_marginTop="16dp"
+            android:hint="@string/fecha_inicial" />
 
-    <RelativeLayout
-        android:id="@+id/fragment_fechaFinal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/FechaFinal"
-        android:layout_marginTop="16dp" />
+        <RelativeLayout
+            android:id="@+id/fragment_fechaInicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FechaInicial"
+            android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/AgregarArchivo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fragment_fechaFinal"
-        android:layout_marginTop="16dp"
-        android:hint="@string/agregar_archivos" />
+        <TextView
+            android:id="@+id/FechaFinal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_fechaInicial"
+            android:layout_marginTop="16dp"
+            android:hint="@string/fecha_final" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/BtnAgregarArchivo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/AgregarArchivo"
-        android:layout_gravity="bottom|end|center_horizontal"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_add_circle_outline_black_48dp" />
+        <RelativeLayout
+            android:id="@+id/fragment_fechaFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FechaFinal"
+            android:layout_marginTop="16dp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/BtnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BtnAgregarArchivo"
-        android:layout_gravity="bottom|end|center_horizontal"
-        android:layout_margin="16dp"
-        app:srcCompat="@android:drawable/ic_menu_save" />
-</RelativeLayout>
+        <TextView
+            android:id="@+id/AgregarArchivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_fechaFinal"
+            android:layout_marginTop="16dp"
+            android:hint="@string/agregar_archivos" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/BtnAgregarArchivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AgregarArchivo"
+            android:layout_gravity="bottom|end|center_horizontal"
+            android:layout_margin="16dp"
+
+            app:srcCompat="@drawable/ic_add_circle_outline_black_48dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/BtnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|end|center_horizontal"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+    </RelativeLayout>
 </ScrollView>

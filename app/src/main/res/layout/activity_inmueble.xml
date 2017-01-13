@@ -176,75 +176,79 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/Patio"
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/SwtPatio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/patio" />
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:padding="20dp"
+            android:text="@string/patio"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOff=""
+            android:textOn="" />
 
-        <Spinner
-            android:id="@+id/spPatio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/Parqueadero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/parqueadero" />
 
-        <Spinner
-            android:id="@+id/spParqueadero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/Lavadero"
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/SwtParqueadero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/lavadero" />
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:padding="20dp"
+            android:text="@string/parqueadero"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOff=""
+            android:textOn="" />
 
-
-        <Spinner
-            android:id="@+id/spLavadero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/Comedor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/comedor" />
-
-
-        <Spinner
-            android:id="@+id/spComedor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:id="@+id/SalaComedor"
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/SwtLavadero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/sala_comedor" />
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:padding="20dp"
+            android:text="@string/lavadero"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOff=""
+            android:textOn="" />
 
-
-        <Spinner
-            android:id="@+id/spSalaComedor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/Sala"
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/SwtComedor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/tipo_inmueble" />
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:padding="20dp"
+            android:text="@string/comedor"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOff=""
+            android:textOn="" />
 
-
-        <Spinner
-            android:id="@+id/spSala"
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/SwtSalaComedor"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textOff=""
+            android:text="@string/sala_comedor"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOn=""
+            android:button="@null"
+            android:padding="20dp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/SwtSala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff=""
+            android:text="@string/sala"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOn=""
+            android:button="@null"
+            android:padding="20dp"/>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -264,10 +268,10 @@
             android:id="@+id/BtnGuardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:baselineAlignBottom="true"
             android:layout_gravity="bottom|end|center_horizontal"
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@android:drawable/ic_menu_save" />
-
 
     </LinearLayout>
 

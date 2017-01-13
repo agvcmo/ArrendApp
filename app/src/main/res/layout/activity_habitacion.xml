@@ -23,7 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/titulo"
-        android:id="@+id/txtArmario">
+        android:id="@+id/txtArmario"
+        android:layout_margin="16dp">
 
         <EditText
             android:id="@+id/Armario"
@@ -35,27 +36,30 @@
             />
 
     </android.support.design.widget.TextInputLayout>
-    <TextView
-        android:id="@+id/TxtBano"
+
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/SwtBano"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ba_o"
-        android:layout_below="@+id/txtArmario"
-        android:layout_marginTop="16dp"/>
-    <Spinner
-        android:id="@+id/spBano"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TxtBano"/>
+        android:textOff=""
+        android:text="@string/ba_o"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorPrimaryDark"
+        android:textOn=""
+        android:button="@null"
+        android:padding="20dp"
+        android:layout_below="@+id/txtArmario"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/BtnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|end|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_menu_save"
-        android:layout_below="@+id/spBano"/>
+        app:srcCompat="@android:drawable/ic_menu_save" />
 
 
 

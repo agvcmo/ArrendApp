@@ -1,13 +1,14 @@
 package com.obando.mejia.arrendapp.Controlador.Activity;
 
 //region Librerias
-
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SwitchCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -18,13 +19,14 @@ import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumSiNo.SiNO;
 import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumTipoInmueble.TiposInmuebles;
 //endregion Librerias
 
-public class InmuebleActivity extends AppCompatActivity {
+public class InmuebleActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
     //region Propiedades
 
     EditText EdtArrendatario, EdtArrendador, EdtDireccion, EdtTelefono, EdtBanosComunes;
     EditText EdtArea, EdtArchivo, EdtEstrato, EdtContrato, EdtPrecio, EdtHabitaciones;
     FloatingActionButton BtnGuardar;
-    Spinner SpTipoInmueble, SpParqueadero, SpLavadero, SpComedor, SpSalaComedor, SpSala, SpPatio;
+    Spinner SpTipoInmueble;
+    SwitchCompat SwParqueadero, SwLavadero, SwComedor, SwSalaComedor, SwSala, SwPatio;
     Boolean BlnParqueadero, BlnLavadero, BlnComedor, BlnSalaComedor, BlnSala, BlnPatio;
     String[] fTipoInmuebles;
     String fTipoInmueble;
@@ -58,24 +60,12 @@ public class InmuebleActivity extends AppCompatActivity {
         SpTipoInmueble = (Spinner) findViewById(R.id.spTipoInmueble);
         SpTipoInmueble.setAdapter(adapterTipoInmueble);
         SpTipoInmueble.setSelection(0);
-        SpComedor = (Spinner) findViewById(R.id.spComedor);
-        SpComedor.setAdapter(adapterSiNo);
-        SpComedor.setSelection(1);
-        SpLavadero = (Spinner) findViewById(R.id.spLavadero);
-        SpLavadero.setAdapter(adapterSiNo);
-        SpLavadero.setSelection(1);
-        SpParqueadero = (Spinner) findViewById(R.id.spParqueadero);
-        SpParqueadero.setAdapter(adapterSiNo);
-        SpParqueadero.setSelection(1);
-        SpSala = (Spinner) findViewById(R.id.spSala);
-        SpSala.setAdapter(adapterSiNo);
-        SpSala.setSelection(1);
-        SpSalaComedor = (Spinner) findViewById(R.id.spSalaComedor);
-        SpSalaComedor.setAdapter(adapterSiNo);
-        SpSalaComedor.setSelection(1);
-        SpPatio = (Spinner) findViewById(R.id.spPatio);
-        SpPatio.setAdapter(adapterSiNo);
-        SpPatio.setSelection(1);
+        SwComedor = (SwitchCompat) findViewById(R.id.SwtComedor);
+        SwLavadero = (SwitchCompat) findViewById(R.id.SwtLavadero);
+        SwParqueadero = (SwitchCompat) findViewById(R.id.SwtParqueadero);
+        SwSala = (SwitchCompat) findViewById(R.id.SwtSala);
+        SwSalaComedor = (SwitchCompat) findViewById(R.id.SwtSalaComedor);
+        SwPatio = (SwitchCompat) findViewById(R.id.SwtPatio);
         BtnGuardar = (FloatingActionButton) findViewById(R.id.BtnGuardar);
         fTipoInmuebles = TiposInmuebles();
     }
@@ -126,93 +116,6 @@ public class InmuebleActivity extends AppCompatActivity {
 
             }
         });
-
-        SpSalaComedor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapter, View vies,
-                                       int position, long id) {
-                BlnSalaComedor = (position == 0);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapter) {
-
-            }
-        });
-
-        SpSala.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapter, View vies,
-                                       int position, long id) {
-                BlnSala = (position == 0);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapter) {
-
-            }
-        });
-
-
-        SpParqueadero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapter, View vies,
-                                       int position, long id) {
-                BlnParqueadero = (position == 0);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapter) {
-
-            }
-        });
-
-
-        SpLavadero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapter, View vies,
-                                       int position, long id) {
-                BlnLavadero = (position == 0);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapter) {
-
-            }
-        });
-
-        SpComedor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapter, View vies,
-                                       int position, long id) {
-                BlnComedor = (position == 0);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapter) {
-
-            }
-        });
-
-        SpPatio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapter, View vies,
-                                       int position, long id) {
-                BlnPatio = (position == 0);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapter) {
-
-            }
-        });
     }
 
     private void mLimpiarCampos() {
@@ -227,12 +130,38 @@ public class InmuebleActivity extends AppCompatActivity {
         EdtBanosComunes.setText("");
         EdtContrato.setText("");
         SpTipoInmueble.setSelection(0);
-        SpComedor.setSelection(1);
-        SpLavadero.setSelection(1);
-        SpPatio.setSelection(1);
-        SpParqueadero.setSelection(1);
-        SpSala.setSelection(1);
-        SpSalaComedor.setSelection(1);
+        SwComedor.setChecked(false);
+        SwLavadero.setChecked(false);
+        SwPatio.setChecked(false);
+        SwParqueadero.setChecked(false);
+        SwSala.setChecked(false);
+        SwSalaComedor.setChecked(false);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        switch (buttonView.getId()) {
+            case R.id.SwtComedor:
+                BlnComedor = isChecked;
+                break;
+            case R.id.SwtLavadero:
+                BlnLavadero = isChecked;
+                break;
+            case R.id.SwtParqueadero:
+                BlnParqueadero = isChecked;
+                break;
+            case R.id.SwtPatio:
+                BlnPatio = isChecked;
+                break;
+            case R.id.SwtSala:
+                BlnSala = isChecked;
+                break;
+            case R.id.SwtSalaComedor:
+                BlnSalaComedor = isChecked;
+                break;
+            default:
+                break;
+        }
     }
     //endregion Metodos
 }

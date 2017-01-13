@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -9,13 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumGenero.Genero;
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumGenero.Genero;
 
-import com.obando.mejia.arrendapp.Enumeraciones.EnumGenero;
-import com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario;
-import com.obando.mejia.arrendapp.Modelo.ClsUsuario;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumGenero;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario;
+import com.obando.mejia.arrendapp.Modelo.Entidades.ClsUsuario;
+import com.obando.mejia.arrendapp.R;
 
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario.RolUsuario;
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario.RolUsuario;
 
 public class UsuarioActivity extends AppCompatActivity {
 

@@ -1,7 +1,9 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.obando.mejia.arrendapp.R;
 
 public class AcercaDeActivity extends AppCompatActivity {
 

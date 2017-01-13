@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 
 //region Librerias
 
@@ -11,10 +11,11 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.obando.mejia.arrendapp.Modelo.ClsInmueble;
+import com.obando.mejia.arrendapp.Modelo.Entidades.ClsInmueble;
+import com.obando.mejia.arrendapp.R;
 
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumSiNo.SiNO;
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumTipoInmueble.TiposInmuebles;
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumSiNo.SiNO;
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumTipoInmueble.TiposInmuebles;
 //endregion Librerias
 
 public class InmuebleActivity extends AppCompatActivity {

@@ -1,7 +1,7 @@
-package com.obando.mejia.arrendapp.Modelo;
+package com.obando.mejia.arrendapp.Modelo.Entidades;
 
-import com.obando.mejia.arrendapp.Enumeraciones.EnumGenero;
-import com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumGenero;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario;
 
 /**
  * Created by ALEXANDER on 10/01/2017.

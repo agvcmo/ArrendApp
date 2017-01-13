@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Dialog;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;

@@ -1,6 +1,6 @@
-package com.obando.mejia.arrendapp.Modelo;
+package com.obando.mejia.arrendapp.Modelo.Entidades;
 
-import com.obando.mejia.arrendapp.Enumeraciones.EnumTipoArchivo;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumTipoArchivo;
 
 import java.util.Date;
 

@@ -1,5 +1,5 @@
 //region Librerias
-package com.obando.mejia.arrendapp.Modelo;
+package com.obando.mejia.arrendapp.Modelo.Entidades;
 //endregion Librerias
 
 /**

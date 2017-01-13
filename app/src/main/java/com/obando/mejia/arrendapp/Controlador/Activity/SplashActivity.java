@@ -1,10 +1,12 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+
+import com.obando.mejia.arrendapp.R;
 
 public class SplashActivity extends AppCompatActivity {
     ProgressBar progressBar;

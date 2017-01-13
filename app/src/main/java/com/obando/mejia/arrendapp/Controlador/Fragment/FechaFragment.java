@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Fragment;
 
 //region Librerias
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import com.obando.mejia.arrendapp.R;
+import com.obando.mejia.arrendapp.Controlador.Dialog.DateDialog;
 //endregion Librerias
 
 public class FechaFragment extends Fragment {

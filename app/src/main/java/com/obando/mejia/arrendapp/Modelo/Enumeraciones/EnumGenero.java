@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp.Enumeraciones;
+package com.obando.mejia.arrendapp.Modelo.Enumeraciones;
 
 public enum EnumGenero {
     Femenino,

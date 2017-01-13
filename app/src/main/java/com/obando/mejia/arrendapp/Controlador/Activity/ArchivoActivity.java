@@ -1,6 +1,5 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 
-import android.preference.EditTextPreference;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,16 +12,15 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.obando.mejia.arrendapp.Enumeraciones.EnumEstadoContrato;
-import com.obando.mejia.arrendapp.Enumeraciones.EnumTipoArchivo;
-import com.obando.mejia.arrendapp.Modelo.ClsArchivo;
-import com.obando.mejia.arrendapp.Modelo.ClsContrato;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumTipoArchivo;
+import com.obando.mejia.arrendapp.Controlador.Fragment.FechaFragment;
+import com.obando.mejia.arrendapp.Modelo.Entidades.ClsArchivo;
+import com.obando.mejia.arrendapp.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumEstadoContrato.EstadosDeContrato;
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumTipoArchivo.TipoArchivo;
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumTipoArchivo.TipoArchivo;
 
 public class ArchivoActivity extends AppCompatActivity implements FechaFragment.onFechaSeleccionada
 {

@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 //region Librerias
 
 import android.content.Intent;
@@ -13,14 +13,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.obando.mejia.arrendapp.Enumeraciones.EnumEstadoContrato;
-import com.obando.mejia.arrendapp.Modelo.ClsContrato;
+import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumEstadoContrato;
+import com.obando.mejia.arrendapp.Controlador.Fragment.FechaFragment;
+import com.obando.mejia.arrendapp.Modelo.Entidades.ClsContrato;
+import com.obando.mejia.arrendapp.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumEstadoContrato.EstadosDeContrato;
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumEstadoContrato.EstadosDeContrato;
 
 //endregion Librerias
 

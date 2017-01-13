@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp;
+package com.obando.mejia.arrendapp.Controlador.Activity;
 //region Librerias
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import com.obando.mejia.arrendapp.Modelo.ClsHabitacion;
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumSiNo.SiNO;
+import com.obando.mejia.arrendapp.Modelo.Entidades.ClsHabitacion;
+import com.obando.mejia.arrendapp.R;
+
+import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumSiNo.SiNO;
 //endregion Librerias
 
 public class HabitacionActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.obando.mejia.arrendapp.Modelo;
+package com.obando.mejia.arrendapp.Modelo.Entidades;
 
 /**
  * Created by personal on 10/01/2017.

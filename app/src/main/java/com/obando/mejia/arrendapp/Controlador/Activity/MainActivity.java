@@ -12,15 +12,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.obando.mejia.arrendapp.Modelo.Entidades.ClsUsuario;
 import com.obando.mejia.arrendapp.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static ArrayList<ClsUsuario> ListaUsuarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ListaUsuarios = new ArrayList<>();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -84,7 +91,7 @@ public class MainActivity extends AppCompatActivity
                 mIniciarActividad(HabitacionActivity.class);
                 break;
             case (R.id.nav_usuario):
-                mIniciarActividad(UsuarioActivity.class);
+                mIniciarActividad(VerUsuariosActivity.class);
                 break;
             default:
                 Toast.makeText(this, "En construcción", Toast.LENGTH_SHORT).show();

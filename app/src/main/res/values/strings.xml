@@ -10,7 +10,9 @@
     <string name="title_activity_contrato">Contrato</string>
     <string name="title_activity_habitacion">Habitación</string>
     <string name="title_activity_acerca_de">Acerca de...</string>
-    <string name="title_activity_usuario">Usuario</string>
+    <string name="title_activity_crear_usuario">Crear Usuario</string>
+
+    <string name="title_activity_ver_usuario">Ver Usuarios</string>
     <string name="title_activity_inmueble">Inmueble</string>
 
     <string name="direccion">Dirección</string>
@@ -70,6 +72,7 @@
     <string name="armario">Armario</string>
     <string name="ba_o">Baño</string>
     <string name="habitaci_n">Habitación</string>
+    <string name="ver_usuarios">Ver usuarios</string>
 
 
 </resources>

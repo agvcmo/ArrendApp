@@ -28,9 +28,11 @@
             android:name=".Controlador.Activity.HabitacionActivity"
             android:label="@string/title_activity_habitacion" />
         <activity
-            android:name=".Controlador.Activity.UsuarioActivity"
-            android:label="@string/title_activity_usuario" />
+            android:name=".Controlador.Activity.CrearUsuarioActivity"
+            android:label="@string/title_activity_crear_usuario" />
 
+        <activity android:name=".Controlador.Activity.VerUsuariosActivity"
+            android:label="@string/title_activity_ver_usuario" />
         <activity android:name=".Controlador.Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

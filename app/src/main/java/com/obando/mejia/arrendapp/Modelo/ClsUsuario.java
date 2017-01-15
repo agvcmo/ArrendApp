@@ -16,7 +16,7 @@ public class ClsUsuario {
     private String Correo;
     private int Edad;
     private EnumGenero Genero;
-    private EnumRolUsuario TipoUsuario;
+    private EnumRolUsuario Tipo;
 
     public int getId() {
         return Id;
@@ -58,12 +58,12 @@ public class ClsUsuario {
         Genero = genero;
     }
 
-    public EnumRolUsuario getTipoUsuario() {
-        return TipoUsuario;
+    public EnumRolUsuario getTipo() {
+        return Tipo;
     }
 
-    public void setTipoUsuario(EnumRolUsuario tipoUsuario) {
-        TipoUsuario = tipoUsuario;
+    public void setTipo(EnumRolUsuario tipo) {
+        Tipo = tipo;
     }
 
     public int getEdad() {

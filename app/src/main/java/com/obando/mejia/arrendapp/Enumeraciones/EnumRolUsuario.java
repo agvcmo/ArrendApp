@@ -13,4 +13,17 @@ public enum EnumRolUsuario {
         }
         return tipos;
     }
+
+    public static  int RolUsuarioEntero(String rolUsuarioString)
+    {
+        switch (rolUsuarioString)
+        {
+            case "Arrendatario" :
+                return 0;
+            case "Arrendador":
+                return 1;
+            default:
+                return 0;
+        }
+    }
 }

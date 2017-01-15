@@ -14,4 +14,17 @@ public enum EnumGenero {
         return tipos;
     }
 
+    public static  int GeneroEntero(String generoString)
+    {
+        switch (generoString)
+        {
+            case "Femenino" :
+                return 0;
+            case "Masculino":
+                return 1;
+            default:
+                return 0;
+        }
+    }
+
 }

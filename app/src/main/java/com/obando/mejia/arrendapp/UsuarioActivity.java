@@ -8,12 +8,26 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import static com.obando.mejia.arrendapp.Enumeraciones.EnumGenero.Genero;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.obando.mejia.arrendapp.Enumeraciones.EnumGenero;
 import com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario;
 import com.obando.mejia.arrendapp.Modelo.ClsUsuario;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario.RolUsuario;
 
@@ -24,6 +38,8 @@ public class UsuarioActivity extends AppCompatActivity {
     EditText EditNombre, EditApellido, EditSegundoApellido, EditNombreUsuario, EditClave, EditTelefono, EditCelular, EditDireccion, EditEdad, EditCorreo;
     int fGenero;
     int fTipoUsuario;
+    RequestQueue requestQueue;
+    private static final String url="http://192.168.1.54:56820/api/usuarios";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +60,7 @@ public class UsuarioActivity extends AppCompatActivity {
         EditDireccion = (EditText) findViewById(R.id.Direccion);
         EditEdad = (EditText) findViewById(R.id.Edad);
         EditCorreo = (EditText) findViewById(R.id.Correo);
+        requestQueue= Volley.newRequestQueue(this);
 
         ArrayAdapter adapterGenero = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, Genero());
         SpGenero = (Spinner) findViewById(R.id.spGenero);
@@ -93,10 +110,8 @@ public class UsuarioActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ClsUsuario clsUsuario = new ClsUsuario();
                 try {
-
-
                     clsUsuario.setGenero(EnumGenero.values()[fGenero]);
-                    clsUsuario.setTipoUsuario(EnumRolUsuario.values()[fTipoUsuario]);
+                    clsUsuario.setTipo(EnumRolUsuario.values()[fTipoUsuario]);
                     clsUsuario.setNombre(EditNombre.getText().toString());
                     clsUsuario.setApellido(EditApellido.getText().toString());
                     clsUsuario.setSegundoApellido(EditSegundoApellido.getText().toString());
@@ -112,8 +127,51 @@ public class UsuarioActivity extends AppCompatActivity {
                 } finally {
                     mLimpiarCampos();
                 }
+
+                setJsonDataToWebservices(url, clsUsuario);
             }
         });
+    }
+
+    public void setJsonDataToWebservices(String url,ClsUsuario clsUsuario){
+        JSONObject params = new JSONObject();
+        try {
+            params.put("Nombre",clsUsuario.getNombre());
+            params.put("Apellido", clsUsuario.getApellido());
+            params.put("SegundoApellido", clsUsuario.getSegundoApellido());
+            params.put("NombreUsuario", clsUsuario.getNombreUsuario());
+            params.put("Clave",clsUsuario.getClave());
+            params.put("Telefono",clsUsuario.getTelefono());
+            params.put("Celular", clsUsuario.getCelular());
+            params.put("Direccion", clsUsuario.getDireccion());
+            params.put("Correo", clsUsuario.getCorreo());
+            params.put("Edad", clsUsuario.getEdad());
+            params.put("Genero", EnumGenero.GeneroEntero(clsUsuario.getGenero().toString()));
+            params.put("Tipo", EnumRolUsuario.RolUsuarioEntero(clsUsuario.getTipo().toString()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Toast.makeText(getApplicationContext(),"Sus datos se enviaron",Toast.LENGTH_LONG);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG);
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new  HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
+            }
+        };
+
+        requestQueue.add(jsonObjectRequest);
     }
 
     private void mLimpiarCampos() {

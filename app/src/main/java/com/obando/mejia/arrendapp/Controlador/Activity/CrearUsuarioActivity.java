@@ -9,11 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import static com.obando.mejia.arrendapp.Controlador.Activity.MainActivity.ListaUsuarios;
 import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumGenero.Genero;
-
-<<<<<<< HEAD:app/src/main/java/com/obando/mejia/arrendapp/UsuarioActivity.java
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -21,25 +18,19 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.obando.mejia.arrendapp.Enumeraciones.EnumGenero;
-import com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario;
-import com.obando.mejia.arrendapp.Modelo.ClsUsuario;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.obando.mejia.arrendapp.Enumeraciones.EnumRolUsuario.RolUsuario;
-=======
 import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumGenero;
 import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario;
 import com.obando.mejia.arrendapp.Modelo.Entidades.ClsUsuario;
 import com.obando.mejia.arrendapp.R;
 
 import static com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario.RolUsuario;
->>>>>>> remotes/origin/master:app/src/main/java/com/obando/mejia/arrendapp/Controlador/Activity/CrearUsuarioActivity.java
+
 
 public class CrearUsuarioActivity extends AppCompatActivity {
 
@@ -120,22 +111,8 @@ public class CrearUsuarioActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ClsUsuario oUsuario = new ClsUsuario();
                 try {
-<<<<<<< HEAD:app/src/main/java/com/obando/mejia/arrendapp/UsuarioActivity.java
-                    clsUsuario.setGenero(EnumGenero.values()[fGenero]);
-                    clsUsuario.setTipo(EnumRolUsuario.values()[fTipoUsuario]);
-                    clsUsuario.setNombre(EditNombre.getText().toString());
-                    clsUsuario.setApellido(EditApellido.getText().toString());
-                    clsUsuario.setSegundoApellido(EditSegundoApellido.getText().toString());
-                    clsUsuario.setNombreUsuario(EditNombreUsuario.getText().toString());
-                    clsUsuario.setClave(EditClave.getText().toString());
-                    clsUsuario.setTelefono(EditTelefono.getText().toString());
-                    clsUsuario.setCelular(EditCelular.getText().toString());
-                    clsUsuario.setDireccion(EditDireccion.getText().toString());
-                    clsUsuario.setEdad(Integer.parseInt(EditEdad.getText().toString()));
-                    clsUsuario.setCorreo(EditCorreo.getText().toString());
-=======
                     oUsuario.setGenero(EnumGenero.values()[fGenero]);
-                    oUsuario.setTipoUsuario(EnumRolUsuario.values()[fTipoUsuario]);
+                    oUsuario.setTipo(EnumRolUsuario.values()[fTipoUsuario]);
                     oUsuario.setNombre(EditNombre.getText().toString());
                     oUsuario.setApellido(EditApellido.getText().toString());
                     oUsuario.setSegundoApellido(EditSegundoApellido.getText().toString());
@@ -151,14 +128,13 @@ public class CrearUsuarioActivity extends AppCompatActivity {
                     {
                         ListaUsuarios.add(oUsuario);
                     }
->>>>>>> remotes/origin/master:app/src/main/java/com/obando/mejia/arrendapp/Controlador/Activity/CrearUsuarioActivity.java
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
                     mLimpiarCampos();
                 }
 
-                setJsonDataToWebservices(url, clsUsuario);
+                setJsonDataToWebservices(url, oUsuario);
             }
         });
     }

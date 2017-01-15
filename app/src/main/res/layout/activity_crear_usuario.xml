@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_archivo"
+    android:id="@+id/activity_usuario"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -12,8 +11,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.obando.mejia.arrendapp.Controlador.Activity.InmuebleActivity"
-    tools:showIn="@layout/activity_inmueble">
+    tools:context="com.obando.mejia.arrendapp.Controlador.Activity.CrearUsuarioActivity">
+
 
     <LinearLayout
         android:id="@+id/layoutinmueble"
@@ -21,24 +20,35 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registro de Inmuebles"
+            android:text="@string/Registro_de_Usuarios"
             android:textSize="30sp" />
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="335dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/Nombre"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Nombre"
+                android:inputType="text|textMultiLine" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/Arrendatario"
+                android:id="@+id/Apellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Arrendatario"
+                android:hint="@string/Apellido"
                 android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
@@ -48,25 +58,37 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/Arrendador"
+                android:id="@+id/SegundoApellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/arrendador"
-                android:inputType="text" />
+                android:hint="@string/SegundoApellido"
+                android:inputType="textMultiLine" />
 
         </android.support.design.widget.TextInputLayout>
-
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/Direccion"
+                android:id="@+id/NombreUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/direccion"
-                android:inputType="text" />
+                android:hint="@string/Nombre_De_Usuario"
+                android:inputType="textMultiLine" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/Clave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Clave"
+                android:inputType="numberPassword|textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -78,35 +100,8 @@
                 android:id="@+id/Telefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/telefono"
-                android:inputType="text" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
-        <TextView
-            android:id="@+id/TipoInmueble"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/tipo_inmueble" />
-
-
-        <Spinner
-            android:id="@+id/spTipoInmueble"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/BanosComunes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/ba_os_comunes"
-                android:inputType="number" />
+                android:hint="@string/Telefono"
+                android:inputType="number|phone" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -115,13 +110,14 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/Area"
+                android:id="@+id/Celular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/area"
-                android:inputType="numberDecimal" />
+                android:hint="@string/Celular"
+                android:inputType="number|phone" />
 
         </android.support.design.widget.TextInputLayout>
+
 
 
         <android.support.design.widget.TextInputLayout
@@ -129,10 +125,10 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/Archivo"
+                android:id="@+id/Direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/archivo"
+                android:hint="@string/Direccion"
                 android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
@@ -142,10 +138,24 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/Estrato"
+                android:id="@+id/Correo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/estrato"
+                android:hint="@string/Correo"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/Edad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Edad"
                 android:inputType="number" />
 
         </android.support.design.widget.TextInputLayout>
@@ -154,12 +164,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/Precio"
+            <TextView
+                android:id="@+id/Genero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/precio"
-                android:inputType="numberDecimal" />
+                android:hint="@string/Genero"
+                android:layout_below="@+id/titulo"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/spGenero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Genero"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -167,113 +184,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/Contrato"
+            <TextView
+                android:id="@+id/Tipo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/contrato"
-                android:inputType="number" />
+                android:hint="@string/Tipo"
+                android:layout_below="@+id/Genero"
+                android:layout_marginTop="16dp"/>
 
-        </android.support.design.widget.TextInputLayout>
-
-
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/SwtPatio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:button="@null"
-            android:padding="20dp"
-            android:text="@string/patio"
-            android:textColor="@color/colorPrimaryDark"
-            android:textOff=""
-            android:textOn="" />
-
-
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/SwtParqueadero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:button="@null"
-            android:padding="20dp"
-            android:text="@string/parqueadero"
-            android:textColor="@color/colorPrimaryDark"
-            android:textOff=""
-            android:textOn="" />
-
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/SwtLavadero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:button="@null"
-            android:padding="20dp"
-            android:text="@string/lavadero"
-            android:textColor="@color/colorPrimaryDark"
-            android:textOff=""
-            android:textOn="" />
-
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/SwtComedor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:button="@null"
-            android:padding="20dp"
-            android:text="@string/comedor"
-            android:textColor="@color/colorPrimaryDark"
-            android:textOff=""
-            android:textOn="" />
-
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/SwtSalaComedor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textOff=""
-            android:text="@string/sala_comedor"
-            android:background="@android:color/transparent"
-            android:textColor="@color/colorPrimaryDark"
-            android:textOn=""
-            android:button="@null"
-            android:padding="20dp"/>
-
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/SwtSala"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textOff=""
-            android:text="@string/sala"
-            android:background="@android:color/transparent"
-            android:textColor="@color/colorPrimaryDark"
-            android:textOn=""
-            android:button="@null"
-            android:padding="20dp"/>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/Habitaciones"
+            <Spinner
+                android:id="@+id/spTipo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/habitaciones"
-                android:inputType="numberDecimal" />
+                android:layout_below="@+id/Tipo"/>
 
         </android.support.design.widget.TextInputLayout>
-
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/BtnGuardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:baselineAlignBottom="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="bottom|end|center_horizontal"
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@android:drawable/ic_menu_save" />
 
     </LinearLayout>
-
 
 </ScrollView>

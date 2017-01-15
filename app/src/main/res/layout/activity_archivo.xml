@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_archivo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,84 +11,88 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
 
-    tools:context="com.obando.mejia.arrendapp.ArchivoActivity">
+    tools:context="com.obando.mejia.arrendapp.Controlador.Activity.ArchivoActivity">
 
-    <LinearLayout
-        android:id="@+id/layoutinmueble"
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Registro_de_Archivos"
+        android:textSize="30sp"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/TipoArchivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/Tipo_Archivo"
+        android:layout_below="@+id/titulo"/>
+
+    <Spinner
+        android:id="@+id/spTipoArchivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TipoArchivo"/>
+
+    <TextView
+        android:id="@+id/FechaInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/fecha_inicial"
+        android:layout_below="@+id/spTipoArchivo"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_fechaInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/FechaInicial"/>
 
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="363dp"
-            android:layout_height="wrap_content"
-            android:text="@string/Registro_de_Archivos"
-            android:textSize="30sp" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtRuta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_fechaInicial">
 
-        <TextView
-            android:id="@+id/TipoArchivo"
+        <EditText
+            android:id="@+id/Ruta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/Tipo_Archivo"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:hint="@string/Ruta" />
 
-        <Spinner
-            android:id="@+id/spTipoArchivo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/FechaInicial"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescripcion"
+        android:layout_below="@+id/txtRuta">
+
+        <EditText
+            android:id="@+id/Descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/fecha_inicial"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:hint="@string/Descripcion"
+            android:inputType="textLongMessage" />
 
-        <RelativeLayout
-            android:id="@+id/fragment_fechaInicial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"/>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/Ruta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/Ruta"
-                android:layout_marginTop="16dp"/>
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/Descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/Descripcion"
-                android:layout_marginTop="16dp"
-                android:inputType="textLongMessage" />
-
-        </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/BtnGuardar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end|center_horizontal"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_menu_save" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/BtnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|end|center_horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_save" />
 
-
-    </LinearLayout>
 </RelativeLayout>
 
 

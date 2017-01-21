@@ -27,4 +27,17 @@ public enum EnumGenero {
         }
     }
 
+    public static  EnumGenero GeneroEnumeracion(int generoint)
+    {
+        switch (generoint)
+        {
+            case  0:
+                return Femenino;
+            case 1:
+                return Masculino;
+            default:
+                return Femenino;
+        }
+    }
+
 }

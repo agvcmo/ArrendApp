@@ -20,7 +20,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    public static final String urlGetUsuarios = "http://192.168.1.54:56820/Api/Usuarios";
     public static ArrayList<ClsUsuario> ListaUsuarios;
 
     @Override

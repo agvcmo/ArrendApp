@@ -6,9 +6,30 @@ import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario;
 public class ClsUsuario {
     private int Id;
     private String Nombre;
+
+    public ClsUsuario() {
+    }
+
     private String Apellido;
     private String SegundoApellido;
     private String NombreUsuario;
+
+    public ClsUsuario(int id, String nombre, String apellido, String segundoApellido, String nombreUsuario, String clave, String telefono, String celular, String direccion, String correo, int edad, EnumGenero genero, EnumRolUsuario tipo) {
+        Id = id;
+        Nombre = nombre;
+        Apellido = apellido;
+        SegundoApellido = segundoApellido;
+        NombreUsuario = nombreUsuario;
+        Clave = clave;
+        Telefono = telefono;
+        Celular = celular;
+        Direccion = direccion;
+        Correo = correo;
+        Edad = edad;
+        Genero = genero;
+        Tipo = tipo;
+    }
+
     private String Clave;
     private String Telefono;
     private String Celular;

@@ -26,4 +26,17 @@ public enum EnumRolUsuario {
                 return 0;
         }
     }
+
+    public static  EnumRolUsuario RolUsuarioEnumeracion(int rolUsuarioint)
+    {
+        switch (rolUsuarioint)
+        {
+            case 0:
+                return Arrendatario;
+            case 1:
+                return Arrendador;
+            default:
+                return Arrendatario;
+        }
+    }
 }

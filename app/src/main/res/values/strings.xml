@@ -14,6 +14,7 @@
 
     <string name="title_activity_ver_usuario">Ver Usuarios</string>
     <string name="title_activity_inmueble">Inmueble</string>
+    <string name="title_activity_login">Login</string>
 
     <string name="direccion">Dirección</string>
     <string name="telefono">Telefono</string>
@@ -73,6 +74,9 @@
     <string name="ba_o">Baño</string>
     <string name="habitaci_n">Habitación</string>
     <string name="ver_usuarios">Ver usuarios</string>
+    <string name="login">Login</string>
+    <string name="ingresar">INGRESAR</string>
+    <string name="recuperar_contrase_a">Recuperar Contraseña</string>
 
 
 </resources>

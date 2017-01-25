@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.obando.mejia.arrendapp.Modelo.Entidades.ClsUsuario;
+import com.obando.mejia.arrendapp.Modelo.Utis.ClsServicio;
 import com.obando.mejia.arrendapp.R;
 import java.util.ArrayList;
-import static com.obando.mejia.arrendapp.Controlador.Activity.MainActivity.ListaUsuarios;
 //endregion Librerias
 
 /**
@@ -23,12 +23,14 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Myvist
     //region Propiedades Adaptador
     private Context fContexto;
     private ArrayList<ClsUsuario> fUsuarios;
+    private ClsServicio fServicio;
     //endregion Propiedades Adaptador
 
     //region Constructor Adaptador
     public UsuariosAdapter(Context paramContext, ArrayList<ClsUsuario> paramUsuarios) {
         this.fContexto = paramContext;
         this.fUsuarios = paramUsuarios;
+        this.fServicio = new ClsServicio(this.fContexto);
     }
     //endregion Constructor Adaptador
 
@@ -86,7 +88,7 @@ public class UsuariosAdapter extends RecyclerView.Adapter<UsuariosAdapter.Myvist
                     menu.add("Eliminar").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
-                            ListaUsuarios.remove(fPosicionItem);
+                            fServicio.mEliminarUsuario(fUsuarios.get(fPosicionItem));
                             return true;
                         }
                     });

@@ -3,7 +3,7 @@
     package="com.obando.mejia.arrendapp">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -34,9 +34,12 @@
         <activity
             android:name=".Controlador.Activity.CrearUsuarioActivity"
             android:label="@string/title_activity_crear_usuario" />
-
-        <activity android:name=".Controlador.Activity.VerUsuariosActivity"
+        <activity
+            android:name=".Controlador.Activity.VerUsuariosActivity"
             android:label="@string/title_activity_ver_usuario" />
+        <activity
+            android:name=".Controlador.Activity.LoginActivity"
+            android:label="@string/title_activity_login" />
         <activity android:name=".Controlador.Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,6 +47,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

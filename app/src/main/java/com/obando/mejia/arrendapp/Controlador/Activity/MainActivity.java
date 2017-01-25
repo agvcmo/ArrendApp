@@ -15,19 +15,15 @@ import android.widget.Toast;
 import com.obando.mejia.arrendapp.Modelo.Entidades.ClsUsuario;
 import com.obando.mejia.arrendapp.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    public static final String urlGetUsuarios = "http://192.168.1.54:56820/Api/Usuarios";
-    public static ArrayList<ClsUsuario> ListaUsuarios;
+    public static ClsUsuario UsuarioActual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListaUsuarios = new ArrayList<>();
+        UsuarioActual = new ClsUsuario();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

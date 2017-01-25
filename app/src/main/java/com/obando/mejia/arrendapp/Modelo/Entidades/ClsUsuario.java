@@ -1,147 +1,156 @@
 package com.obando.mejia.arrendapp.Modelo.Entidades;
+//region Librerias
 
 import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumGenero;
 import com.obando.mejia.arrendapp.Modelo.Enumeraciones.EnumRolUsuario;
 
+//endregion Librerias
 public class ClsUsuario {
-    private int Id;
-    private String Nombre;
+    // region Atributos
+    private int fId;
+    private String fNombre;
+    private String fApellido;
+    private String fSegundoApellido;
+    private String fNombreUsuario;
+    private String fClave;
+    private String fTelefono;
+    private String fCelular;
+    private String fDireccion;
+    private String fCorreo;
+    private int fEdad;
+    private EnumGenero fGenero;
+    private EnumRolUsuario fTipo;
+
+
+    //endregion Atributos
+
 
     public ClsUsuario() {
     }
 
-    private String Apellido;
-    private String SegundoApellido;
-    private String NombreUsuario;
 
-    public ClsUsuario(int id, String nombre, String apellido, String segundoApellido, String nombreUsuario, String clave, String telefono, String celular, String direccion, String correo, int edad, EnumGenero genero, EnumRolUsuario tipo) {
-        Id = id;
-        Nombre = nombre;
-        Apellido = apellido;
-        SegundoApellido = segundoApellido;
-        NombreUsuario = nombreUsuario;
-        Clave = clave;
-        Telefono = telefono;
-        Celular = celular;
-        Direccion = direccion;
-        Correo = correo;
-        Edad = edad;
-        Genero = genero;
-        Tipo = tipo;
+    public ClsUsuario(int paramid, String paramnombre, String paramApellido, String segundoApellido, String paramNombreUsuario, String paramClave, String paramTelefono, String paramCelular, String paramDireccion, String paramCorreo, int paramEdad, EnumGenero paramGenero, EnumRolUsuario paramTipo) {
+        fId = paramid;
+        fNombre = paramnombre;
+        fApellido = paramApellido;
+        fSegundoApellido = segundoApellido;
+        fNombreUsuario = paramNombreUsuario;
+        fClave = paramClave;
+        fTelefono = paramTelefono;
+        fCelular = paramCelular;
+        fDireccion = paramDireccion;
+        fCorreo = paramCorreo;
+        fEdad = paramEdad;
+        fGenero = paramGenero;
+        fTipo = paramTipo;
     }
 
-    private String Clave;
-    private String Telefono;
-    private String Celular;
-    private String Direccion;
-    private String Correo;
-    private int Edad;
-    private EnumGenero Genero;
-    private EnumRolUsuario Tipo;
-
     public int getId() {
-        return Id;
+        return fId;
     }
 
     public void setId(int id) {
-        Id = id;
+        fId = id;
     }
 
     public String getNombre() {
-        return Nombre;
+        return fNombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        fNombre = nombre;
     }
 
     public String getApellido() {
-        return Apellido;
+        return fApellido;
     }
 
     public void setApellido(String apellido) {
-        Apellido = apellido;
+        fApellido = apellido;
     }
 
     public String getNombreUsuario() {
-        return NombreUsuario;
+        return fNombreUsuario;
     }
 
     public void setNombreUsuario(String nombreUsuario) {
-        NombreUsuario = nombreUsuario;
+        fNombreUsuario = nombreUsuario;
     }
 
     public EnumGenero getGenero() {
-        return Genero;
+        return fGenero;
     }
 
     public void setGenero(EnumGenero genero) {
-        Genero = genero;
+        fGenero = genero;
     }
 
     public EnumRolUsuario getTipo() {
-        return Tipo;
+        return fTipo;
     }
 
     public void setTipo(EnumRolUsuario tipo) {
-        Tipo = tipo;
+        fTipo = tipo;
     }
 
     public int getEdad() {
-        return Edad;
+        return fEdad;
     }
 
     public void setEdad(int edad) {
-        Edad = edad;
+        fEdad = edad;
     }
 
     public String getDireccion() {
-        return Direccion;
+        return fDireccion;
     }
 
     public void setDireccion(String direccion) {
-        Direccion = direccion;
+        fDireccion = direccion;
     }
 
     public String getCorreo() {
-        return Correo;
+        return fCorreo;
     }
 
     public void setCorreo(String correo) {
-        Correo = correo;
+        fCorreo = correo;
     }
 
     public String getCelular() {
-        return Celular;
+        return fCelular;
     }
 
     public void setCelular(String celular) {
-        Celular = celular;
+        fCelular = celular;
     }
 
     public String getTelefono() {
-        return Telefono;
+        return fTelefono;
     }
 
     public void setTelefono(String telefono) {
-        Telefono = telefono;
+        fTelefono = telefono;
     }
 
     public String getClave() {
-        return Clave;
+        return fClave;
     }
 
     public void setClave(String clave) {
-        Clave = clave;
+        fClave = clave;
     }
 
     public String getSegundoApellido() {
-        return SegundoApellido;
+        return fSegundoApellido;
     }
 
     public void setSegundoApellido(String segundoApellido) {
-        SegundoApellido = segundoApellido;
+        fSegundoApellido = segundoApellido;
     }
 
-
+    public ClsUsuario mUsuarioValido(String paramUsuario, String paramClave) {
+        ClsUsuario oUsuario = new ClsUsuario();
+        return oUsuario;
+    }
 }
